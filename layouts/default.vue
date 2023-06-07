@@ -16,7 +16,7 @@
 
 <style scoped>
 header {
-  margin: 1.5rem 1rem 0 1rem;
+  margin: 1.5rem 1rem;
   display: flex;
   justify-content: space-between;
 }

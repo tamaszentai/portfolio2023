@@ -9,7 +9,7 @@
             d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"/>
     </svg>
   </button>
-  <div class="menu-list" v-if="isMenuOpen">
+  <div :class="isMenuOpen ? 'menu-list open' : 'menu-list'">
     <ul>
       <li><a href="/">About me</a></li>
       <li><a href="/resume">Resume</a></li>
@@ -91,13 +91,36 @@ body {
 
 .menu-list {
   box-sizing: border-box;
+  top: -100%;
+  left: 0;
   margin: 0;
   padding: 0;
   position: fixed;
   background: salmon;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: 10;
+  transition: top 0.5s ease;
+}
+
+.menu-list.open {
+  top: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+li {
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 </style>
