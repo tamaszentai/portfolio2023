@@ -40,7 +40,7 @@ body {
 }
 
 .menu {
-  z-index: 11;
+  z-index: 100;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -96,10 +96,10 @@ body {
   margin: 0;
   padding: 0;
   position: fixed;
-  background: salmon;
+  background: bisque;
   width: 100%;
   height: 100vh;
-  z-index: 10;
+  z-index: 99;
   transition: top 0.5s ease;
 }
 

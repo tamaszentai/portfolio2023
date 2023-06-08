@@ -23,8 +23,8 @@ header {
 
 .design-cube {
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 1rem;
+  height: 1rem;
   background-color: #000;
 }
 
@@ -32,7 +32,7 @@ header {
   display: inline-block;
   font-size: 1.3rem;
   font-weight: 700;
-  margin-left: 10px;
+  margin-left: 1rem;
   color: #000;
   font-family: Avenir, Helvetica, Arial, sans-serif
 }
