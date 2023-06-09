@@ -11,10 +11,10 @@
   </button>
   <div :class="isMenuOpen ? 'menu-list open' : 'menu-list'">
     <ul>
-      <li><a href="/">About me</a></li>
-      <li><a href="/resume">Resume</a></li>
-      <li><a href="/projects">Projects</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li><NuxtLink to="/" @click.native="toggleMenu">About me</NuxtLink></li>
+      <li><NuxtLink to="/resume" @click.native="toggleMenu">Resume</NuxtLink></li>
+      <li><NuxtLink to="/projects" @click.native="toggleMenu">Projects</NuxtLink></li>
+      <li><NuxtLink to="/contact" @click.native="toggleMenu">Contact</NuxtLink></li>
     </ul>
   </div>
 </template>
@@ -50,7 +50,7 @@ body {
 
 .line {
   fill: none;
-  stroke: black;
+  stroke: #606C5D;
   stroke-width: 6;
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
   stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -96,7 +96,7 @@ body {
   margin: 0;
   padding: 0;
   position: fixed;
-  background: bisque;
+  background: #F7E6C4;
   width: 100%;
   height: 100vh;
   z-index: 99;
