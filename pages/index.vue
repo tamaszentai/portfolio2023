@@ -123,7 +123,24 @@ svg {
   width: 100%;
   height: auto;
   background-color: #F1C376;
-  padding: 200px 1rem 50px 1rem;
+  padding: 12rem 10% 3rem 10%;
   z-index: 9;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #000;
+  font-family: Avenir, Helvetica, Arial, sans-serif
+}
+
+h2 {
+font-size: 1.3rem;
+  margin-bottom: 2rem;
+  font-family: Avenir, Helvetica, Arial, sans-serif
+}
+
+p {
+  line-height: 1.8rem;
 }
 </style>
