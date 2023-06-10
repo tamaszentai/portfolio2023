@@ -20,7 +20,7 @@
           impedit in ipsa laboriosam laborum magnam neque, nisi repudiandae sapiente sed soluta, suscipit ut vitae
           voluptates?</p>
 
-        <img src="../assets/images/tamas.jpg" alt="project image">
+        <img src="../assets/images/project.jpg" alt="project image">
       </div>
     </main>
   </div>
