@@ -40,12 +40,12 @@
 }
 
 .hero-box {
-  width: 80%;
-  margin-left: 10%;
+  width: 90%;
+  margin-left: 5%;
   height: 450px;
   background-color: #F7E6C4;
   z-index: 10;
-  box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
@@ -83,7 +83,7 @@ hr {
   border-radius: 25px;
   color: #FFF4F4;
   padding: 0.8rem 1rem;
-  margin: 1rem 0.5rem;
+  margin: 1rem 1.5rem;
   text-align: center;
   display: inline-block;
   font-size: 16px;
@@ -96,7 +96,7 @@ hr {
   border: 1px solid #000;
   color: #000;
   padding: 0.8rem 1rem;
-  margin: 1rem 0.5rem;
+  margin: 1rem 1.5rem;
   text-align: center;
   display: inline-block;
   font-size: 16px;
