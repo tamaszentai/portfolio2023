@@ -19,9 +19,9 @@
       <h1>Hello</h1>
       <h2>Here's who I am & what I do</h2>
 
-      <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p>
+      <p>Aliquid autem consectetur error, maxime nulla reprehenderit sit unde? Accusantium deserunt incidunt laboriosam molestias numquam sit ut voluptas? Aspernatur doloribus iste perferendis.</p>
 
-      <p>I’m a great place for you to tell a story and let your users know a little more about you.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolores eius nobis perferendis quam sint vel?</p>
     </div>
   </div>
 </template>

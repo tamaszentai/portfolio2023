@@ -90,21 +90,20 @@ body {
 }
 
 .menu-list {
-  box-sizing: border-box;
+  position: fixed;
   top: -100%;
   left: 0;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  background: #F7E6C4;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  background-color: #F7E6C4;
+  opacity: 0;
+  transition: top .5s ease, opacity .5s ease;
   z-index: 99;
-  transition: top 0.5s ease;
 }
 
 .menu-list.open {
   top: 0;
+  opacity: 1;
 }
 
 ul {
@@ -112,7 +111,7 @@ ul {
   padding: 0;
   margin: 0;
   position: absolute;
-  top: 30%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -121,6 +120,18 @@ li {
   margin-bottom: 3rem;
   font-size: 1.5rem;
   text-transform: uppercase;
+  font-weight: 700;
 }
+
+li a {
+  text-decoration: none;
+  color: #606C5D;
+}
+
+.router-link-active {
+  color: black;
+}
+
+
 
 </style>

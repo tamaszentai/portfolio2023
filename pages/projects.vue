@@ -95,6 +95,7 @@ h1 {
   padding: 1.5rem;
 }
 .project img {
+  display: block;
   width: 100%;
   height: 100%;
 }
