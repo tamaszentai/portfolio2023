@@ -10,10 +10,10 @@
 <!--     desktop nav-->
      <nav>
      <ul>
-         <li><NuxtLink to="/" @click.native="toggleMenu">About me</NuxtLink></li>
-         <li><NuxtLink to="/resume" @click.native="toggleMenu">Resume</NuxtLink></li>
-         <li><NuxtLink to="/projects" @click.native="toggleMenu">Projects</NuxtLink></li>
-         <li><NuxtLink to="/contact" @click.native="toggleMenu">Contact</NuxtLink></li>
+         <li><NuxtLink to="/">About me</NuxtLink></li>
+         <li><NuxtLink to="/resume">Resume</NuxtLink></li>
+         <li><NuxtLink to="/projects">Projects</NuxtLink></li>
+         <li><NuxtLink to="/contact">Contact</NuxtLink></li>
      </ul>
      </nav>
  </header>
