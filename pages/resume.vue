@@ -17,7 +17,6 @@
         <p id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut debitis deserunt doloremque, expedita fuga
           impedit in ipsa laboriosam laborum magnam neque, nisi repudiandae sapiente sed soluta, suscipit ut vitae
           voluptates?</p>
-
       </div>
     </main>
   </div>
@@ -31,6 +30,7 @@
 .container {
   background-color: #F1C376;
   padding-bottom: 3rem;
+    min-height: 77vh;
 }
 
 header {

@@ -1,11 +1,21 @@
 <template>
- <header class="mobile">
+    <div class="container">
+ <header>
    <div class="name-tag">
      <div class="design-cube" />
      <span class="name">Tamás Zentai</span>
      <span class="title">Software Developer</span>
    </div>
    <HamburgerMenu />
+<!--     desktop nav-->
+     <nav>
+     <ul>
+         <li><NuxtLink to="/" @click.native="toggleMenu">About me</NuxtLink></li>
+         <li><NuxtLink to="/resume" @click.native="toggleMenu">Resume</NuxtLink></li>
+         <li><NuxtLink to="/projects" @click.native="toggleMenu">Projects</NuxtLink></li>
+         <li><NuxtLink to="/contact" @click.native="toggleMenu">Contact</NuxtLink></li>
+     </ul>
+     </nav>
  </header>
   <slot />
   <footer>
@@ -26,6 +36,7 @@
       © 2023 by Tamás Zentai
     </div>
   </footer>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -48,11 +59,15 @@ html {
 </style>
 
 <style scoped>
+.container {
+}
+
 header {
   margin: 1.5rem 1rem;
   display: flex;
   justify-content: space-between;
   background-color: #FFF4F4;
+    height: 5vh;
 }
 
 .design-cube {
@@ -81,8 +96,8 @@ header {
   text-transform: uppercase;
 }
 
-footer {
-  height: 8rem;
+nav {
+    display: none;
 }
 
 .footer-information {
@@ -95,6 +110,7 @@ footer > div {
 }
 
 .follow-container, .write-container {
+    display: inline-block;
   margin-top: 1.5rem;
   width: 50%;
 }
@@ -123,7 +139,61 @@ p {
   text-transform: uppercase;
 }
 
+@media only screen and (min-width: 768px) {
+    .design-cube {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
 
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .name:after {
+
+    }
+
+    .title {
+        display: inline-block;
+        font-size: 1.2rem;
+    }
+
+    .title:before {
+        content: "\00a0 / ";
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    header {
+        align-content: center;
+    }
+    nav {
+        display: block;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+        font-size: 1rem;
+        margin: .8rem 1rem 0 0;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    li a {
+        text-decoration: none;
+        color: #606C5D;
+    }
+
+    .router-link-active {
+        color: black;
+    }
+
+}
 
 
 </style>

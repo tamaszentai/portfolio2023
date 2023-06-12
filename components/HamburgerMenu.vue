@@ -132,6 +132,13 @@ li a {
   color: black;
 }
 
+@media only screen and (min-width: 1024px) {
+  .menu {
+      display: none;
+  }
+
+}
+
 
 
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="first-box">
       <div class="hero-box">
         <img src="../assets/images/tamas.jpg" alt="Hero image" />
@@ -26,10 +26,16 @@
   </div>
 </template>
 <script setup lang="ts">
+const { isMobile } = useDevice();
+console.log(isMobile);
 
 </script>
 
 <style scoped>
+.container {
+    min-height: 77vh;
+}
+
 .first-box {
   position: relative;
   width: 100%;

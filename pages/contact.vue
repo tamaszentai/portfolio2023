@@ -38,6 +38,7 @@
 .container {
   background-color: #F1C376;
   padding-bottom: 3rem;
+    min-height: 77vh;
 }
 
 header {
@@ -111,4 +112,13 @@ main {
   text-transform: uppercase;
   font-weight: bold;
 }
+
+@media only screen and (min-width: 768px) {
+    main {
+        width: 70%;
+        height: 50vh;
+        margin: 0 auto;
+    };
+}
+
 </style>

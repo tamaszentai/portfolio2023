@@ -35,6 +35,7 @@
 .container {
   background-color: #F1C376;
   padding-bottom: 3rem;
+    min-height: 77vh;
 }
 
 header {
