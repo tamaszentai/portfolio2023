@@ -29,7 +29,7 @@
       </div>
       <div class="write-container">
         <h4>Write</h4>
-        <p>zentaitamas@gmail.com</p>
+        <a href="mailto:zentaitamas@gmail.com"><p>zentaitamas@gmail.com</p></a>
       </div>
     </div>
     <div class="copyright-container">
@@ -123,10 +123,16 @@ svg {
   opacity: 0.7;
   height: 1.5rem;
   margin-right: 1.5rem;
+    cursor: pointer;
 }
 
 p {
   margin-top: 0.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 .copyright-container {
