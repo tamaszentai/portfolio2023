@@ -100,6 +100,7 @@ hr {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: bold;
+    cursor: pointer;
 }
 
 .projects-button {
@@ -113,6 +114,7 @@ hr {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: bold;
+    cursor: pointer;
 }
 
 .desktop-title {
@@ -132,6 +134,7 @@ hr {
 svg {
   margin: 0.2rem 2rem;
   opacity: 0.7;
+    cursor: pointer;
 }
 
 .second-box {
