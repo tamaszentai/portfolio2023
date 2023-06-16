@@ -71,6 +71,7 @@ h1 {
   font-size: .8rem;
   text-transform: uppercase;
   font-weight: bold;
+    cursor: pointer;
 }
 
 .experience {
@@ -100,6 +101,12 @@ h1 {
 #description {
   margin-top: 1rem;
   line-height: 1.5rem;
+}
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        padding: 0 25%;
+    }
 }
 
 

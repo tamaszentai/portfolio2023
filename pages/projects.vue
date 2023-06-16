@@ -90,6 +90,7 @@ h1 {
 .project-header svg {
   padding-bottom: .5rem;
   opacity: 0.7;
+    cursor: pointer;
 }
 
 #description {

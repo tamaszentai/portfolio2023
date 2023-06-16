@@ -111,6 +111,7 @@ main {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: bold;
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
