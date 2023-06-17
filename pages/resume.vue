@@ -10,13 +10,17 @@
     </header>
     <main>
       <div class="experience">
+          <div class="information">
         <h3 id="date"> 2022 - Present</h3>
         <h3 id="title">Full-stack Software Engineer</h3>
         <p id="company">nuom</p>
         <p id="location">Nottingham, UK</p>
+          </div>
+          <div class="description">
         <p id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut debitis deserunt doloremque, expedita fuga
           impedit in ipsa laboriosam laborum magnam neque, nisi repudiandae sapiente sed soluta, suscipit ut vitae
           voluptates?</p>
+          </div>
       </div>
     </main>
   </div>
@@ -106,6 +110,22 @@ h1 {
 @media only screen and (min-width: 1024px) {
     .container {
         padding: 0 25%;
+    }
+
+    .experience {
+        display: flex;
+    }
+
+    .information {
+      margin-right: 5rem;
+    }
+
+    .information h3, p {
+        width: 100%;
+    }
+
+    .description {
+        padding: 0 3rem;
     }
 }
 
