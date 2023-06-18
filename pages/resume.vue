@@ -116,8 +116,9 @@ h1 {
         display: flex;
     }
 
-    .information {
-      margin-right: 5rem;
+    .information h3 {
+        display: inline-block;
+        margin-right: 5rem; /* Választható: adhatsz margót az elemek közé, ha szükséges */
     }
 
     .information h3, p {
