@@ -94,7 +94,6 @@ h1 {
 #title {
   margin-bottom: 1rem;
   text-transform: uppercase;
-  font-weight: 400;
   font-size: 1rem;
 }
 
@@ -114,11 +113,12 @@ h1 {
 
     .experience {
         display: flex;
+        width: 100%;
     }
 
     .information h3 {
         display: inline-block;
-        margin-right: 5rem; /* Választható: adhatsz margót az elemek közé, ha szükséges */
+        margin-right: 5rem;
     }
 
     .information h3, p {

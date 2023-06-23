@@ -223,11 +223,21 @@ p {
   .second-box {
     background-color: #FFF4F4;
     width: 60%;
-    padding: 7rem 10% 3rem 10%;
+    padding: 10% 10% 3rem 10%;
   }
 
   .desktop-buttons {
     display: block;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .hero-box {
+    margin-top: 10%;
+  }
+
+  .second-box {
+    padding-top: 15%;
   }
 }
 </style>
