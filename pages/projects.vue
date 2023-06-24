@@ -112,24 +112,25 @@ h1 {
 }
 
 @media only screen and (min-width: 1024px) {
+  #projects-introduction {
+    padding: 0 20%;
+  }
+
   .project {
+    padding: 0;
+    margin: 0 auto;
+    width: 50%;
     display: flex;
-    position: relative;
   }
 
   .project-information {
-    flex-basis: 60%;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    padding: 3rem 0;
   }
 
   .project img {
-    flex-basis: 40%;
-    max-width: 100%;
+    width: 50%;
     height: auto;
-    align-self: flex-end;
-    display: block;
+    object-fit: cover;
   }
 }
 

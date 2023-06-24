@@ -39,8 +39,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
-
+<script setup>
 </script>
 
 <style>
@@ -56,14 +55,34 @@ html {
   margin: 0;
   padding: 0;
 }
+
+@media only screen and (min-width: 1440px) {
+  html {
+    margin: 0 10%;
+    background-color: white;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  html {
+    margin: 0 20%;
+  }
+}
+
+@media only screen and (min-width: 2600px) {
+  html {
+    margin: 0 30%;
+  }
+}
 </style>
 
 <style scoped>
 .container {
+  background-color: #FFF4F4;
 }
 
 header {
-  margin: 1.5rem 1rem;
+  margin: 1.5rem 1rem 1.5rem 1rem;
   display: flex;
   justify-content: space-between;
   background-color: #FFF4F4;
@@ -98,6 +117,11 @@ header {
 
 nav {
     display: none;
+}
+
+footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .footer-information {
@@ -172,7 +196,9 @@ a {
 
 @media only screen and (min-width: 1024px) {
     header {
-        align-content: center;
+      align-content: center;
+      margin: 0 1rem 2.5rem 1rem;
+      padding-top: 1.5rem;
     }
     nav {
         display: block;
@@ -198,7 +224,14 @@ a {
     .router-link-active {
         color: black;
     }
+}
 
+@media only screen and (min-width: 1440px) {
+  header {
+    align-content: center;
+    margin: 0 1rem 1rem 1rem;
+    padding-top: 1.5rem;
+  }
 }
 
 
