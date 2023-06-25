@@ -18,7 +18,7 @@
 
       <div class="form-group">
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="8" placeholder="Enter your message"></textarea>
+        <textarea id="message" name="message" placeholder="Enter your message"></textarea>
       </div>
       </form>
       <div class="button-container">
@@ -96,6 +96,11 @@ main {
   border-color: #606C5D;
 }
 
+textarea {
+  height: 8rem;
+  resize: none;
+}
+
 .button-container {
   text-align: center;
 }
@@ -117,9 +122,34 @@ main {
 @media only screen and (min-width: 768px) {
     main {
         width: 70%;
-        height: 50vh;
+        height: 30rem;
         margin: 0 auto;
-    };
+    }
+
+  .send-button {
+    margin: 2rem 0 0 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .button-container {
+    text-align: left;
+  }
+
+  .send-button {
+    margin: 1rem 0 0 1.5rem;
+    padding: .5rem 2rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  main {
+    height: 40rem;
+  }
+
+  textarea {
+    height: 15rem;
+  }
 }
 
 </style>
