@@ -5,30 +5,59 @@
       <h1>Let's talk</h1>
     </header>
     <main>
-      <form>
+      <form id="contact-form" @submit.prevent="sendEmail" ref="form">
       <div class="form-group">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <input type="text" id="name" name="user_name" placeholder="Enter your name" v-model="user_name">
       </div>
 
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <input type="email" id="email" name="user_email" placeholder="Enter your email" v-model="user_email">
       </div>
 
       <div class="form-group">
         <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+        <textarea id="message" name="message" placeholder="Enter your message" v-model="message"></textarea>
       </div>
       </form>
       <div class="button-container">
-        <div class="send-button">Send</div>
+        <button class="send-button" type="submit" form="contact-form">Send</button>
       </div>
     </main>
   </div>
 </template>
 
 <script setup lang="ts">
+import emailjs from '@emailjs/browser';
+
+const config = useRuntimeConfig();
+const form = ref(null);
+const user_name = ref('');
+const user_email = ref('');
+const message = ref('');
+
+
+onMounted(() => {
+  form.value
+})
+
+const clearForm = () => {
+  user_name.value = '';
+  user_email.value = '';
+  message.value = '';
+}
+
+const sendEmail = async () =>  {
+  try {
+    await emailjs.sendForm(config.public.EMAILJS_SERVICE_ID, config.public.EMAILJS_TEMPLATE_ID, form.value, config.public.EMAILJS_PUBLIC_KEY)
+    await console.log('SUCCESS!');
+    clearForm();
+  } catch (e) {
+    await console.log(e, 'FAILED')
+    clearForm();
+  }
+}
 
 </script>
 
@@ -106,6 +135,7 @@ textarea {
 }
 
 .send-button {
+  border: none;
   background-color: #606C5D;
   border-radius: 25px;
   color: #FFF4F4;

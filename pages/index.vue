@@ -32,7 +32,6 @@
 </template>
 <script setup lang="ts">
 const { isMobile } = useDevice();
-console.log(isMobile);
 
 </script>
 
