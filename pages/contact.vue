@@ -8,17 +8,17 @@
       <form id="contact-form" @submit.prevent="sendEmail" ref="form">
       <div class="form-group">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name" placeholder="Enter your name" v-model="user_name">
+        <input type="text" id="name" name="user_name" placeholder="Enter your name" v-model="user_name" required>
       </div>
 
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="user_email" placeholder="Enter your email" v-model="user_email">
+        <input type="email" id="email" name="user_email" placeholder="Enter your email" v-model="user_email" required>
       </div>
 
       <div class="form-group">
         <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Enter your message" v-model="message"></textarea>
+        <textarea id="message" name="message" placeholder="Enter your message" v-model="message" required></textarea>
       </div>
       </form>
       <div class="button-container">
@@ -30,6 +30,7 @@
 
 <script setup lang="ts">
 import emailjs from '@emailjs/browser';
+import {notify} from "~/composables/Toast";
 
 const config = useRuntimeConfig();
 const form = ref(null);
@@ -49,12 +50,16 @@ const clearForm = () => {
 }
 
 const sendEmail = async () =>  {
+  if (user_name.value === '' || user_email.value === '' || message.value === '') {
+    notify({message: 'Please fill in all fields', type: 'error'})
+    return;
+  }
   try {
     await emailjs.sendForm(config.public.EMAILJS_SERVICE_ID, config.public.EMAILJS_TEMPLATE_ID, form.value, config.public.EMAILJS_PUBLIC_KEY)
-    await console.log('SUCCESS!');
+    notify({message: 'Your message has been sent!', type: 'success'});
     clearForm();
   } catch (e) {
-    await console.log(e, 'FAILED')
+    notify({message: 'Something went wrong, please try again later', type: 'error'});
     clearForm();
   }
 }
