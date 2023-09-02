@@ -6,8 +6,8 @@
         <div class="name">Tamás <br /> Zentai</div>
         <hr />
         <div class="buttons">
-          <div class="resume-button">Resume</div>
-          <div class="projects-button">Projects</div>
+          <NuxtLink to="/resume"><div class="resume-button">Resume</div></NuxtLink>
+          <NuxtLink to="/projects"><div class="projects-button">Projects</div></NuxtLink>
         </div>
         <div class="desktop-title">Software Developer</div>
         <div class="social-links">

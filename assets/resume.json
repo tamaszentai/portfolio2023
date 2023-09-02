@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "startDate": "2022-01",
+      "endDate": "2022-06",
+      "title": "Junior Software Engineer",
+      "companyName": "Jyre",
+      "companyBase": "Oxford, UK",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut debitis deserunt doloremque, expedita fuga impedit in ipsa laboriosam laborum magnam neque, nisi repudiandae sapiente sed soluta, suscipit ut vitae voluptates?"
+    },
+    {
+      "startDate": "2022-06",
+      "endDate": "-",
+      "title": "Junior Full-Stack Software Engineer",
+      "companyName": "nuom",
+      "companyBase": "Nottingham, UK",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut debitis deserunt doloremque, expedita fuga impedit in ipsa laboriosam laborum magnam neque, nisi repudiandae sapiente sed soluta, suscipit ut vitae voluptates?"
+    }
+  ]
+}

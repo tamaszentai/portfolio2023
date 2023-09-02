@@ -1,3 +1,31 @@
+<script setup lang="ts">
+import {items} from '../assets/resume.json';
+
+interface Job {
+  startDate: string;
+  "endDate": string;
+  "title": string;
+  "companyName": string;
+  "companyBase": string;
+  "description": string;
+}
+
+
+const sortedJobs = items.sort((a: Job, b: Job) => {
+  const dateA = Date.parse(a.startDate);
+  const dateB = Date.parse(b.startDate);
+
+  if (dateA > dateB) {
+    return -1;
+  } else if (dateA < dateB) {
+    return 1;
+  }
+  return 0;
+})
+
+console.log(sortedJobs)
+</script>
+
 <template>
   <div class="container">
     <header>
@@ -9,32 +37,26 @@
       </div>
     </header>
     <main>
-      <div class="experience">
-          <div class="information">
-        <h3 id="date"> 2022 - Present</h3>
-        <h3 id="title">Full-stack Software Engineer</h3>
-        <p id="company">nuom</p>
-        <p id="location">Nottingham, UK</p>
-          </div>
-          <div class="description">
-        <p id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut debitis deserunt doloremque, expedita fuga
-          impedit in ipsa laboriosam laborum magnam neque, nisi repudiandae sapiente sed soluta, suscipit ut vitae
-          voluptates?</p>
-          </div>
+      <div v-for="(item, index) in sortedJobs" :key="index" class="experience">
+        <div class="information">
+          <h3 id="date">{{ item.startDate }} <span style="color: black">-</span> {{ item.endDate === '-' ? 'Present' : item.endDate }}</h3>
+          <h3 id="title">{{ item.title }}</h3>
+          <p id="company">{{ item.companyName }}</p>
+          <p id="location">{{ item.companyBase }}</p>
+        </div>
+        <div class="description">
+          <p id="description">{{ item.description }}</p>
+        </div>
       </div>
     </main>
   </div>
 </template>
 
-<script setup lang="ts">
-
-</script>
-
 <style scoped>
 .container {
   background-color: #F1C376;
   padding-bottom: 3rem;
-    min-height: 77vh;
+  min-height: 77vh;
 }
 
 header {
@@ -75,13 +97,13 @@ h1 {
   font-size: .8rem;
   text-transform: uppercase;
   font-weight: bold;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .experience {
   width: 90%;
   padding: 2.5rem 1rem;
-  margin: 0 5% 0 5%;
+  margin: 0 5% 5% 5%;
   background-color: #FFF4F4;
   box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
 }
@@ -107,30 +129,28 @@ h1 {
 }
 
 @media only screen and (min-width: 1024px) {
-    .container {
-        padding: 0 25%;
-    }
+  .container {
+    padding: 0 25%;
+  }
 
-    .experience {
-        display: flex;
-        width: 100%;
-    }
+  .experience {
+    display: flex;
+    width: 100%;
+  }
 
-    .information h3 {
-        display: inline-block;
-        margin-right: 5rem;
-    }
+  .information h3 {
+    display: inline-block;
+    margin-right: 5rem;
+  }
 
-    .information h3, p {
-        width: 100%;
-    }
+  .information h3, p {
+    width: 100%;
+  }
 
-    .description {
-        padding: 0 3rem;
-    }
+  .description {
+    padding: 0 3rem;
+  }
 }
-
-
 
 
 </style>
