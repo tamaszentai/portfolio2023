@@ -21,4 +21,5 @@ export default defineNuxtConfig({
         '@pinia/nuxt',
         '@nuxtjs/device',
     ],
+    css: ['~/assets/less/main.less']
 })

@@ -35,7 +35,8 @@ const { isMobile } = useDevice();
 
 </script>
 
-<style scoped>
+<style scoped lang="less">
+@import (reference) '../assets/less/main.less';
 .container {
     min-height: 77vh;
 }
@@ -53,7 +54,7 @@ const { isMobile } = useDevice();
   width: 90%;
   margin-left: 5%;
   height: 450px;
-  background-color: #F7E6C4;
+  background-color: @color2;
   z-index: 10;
   box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -89,7 +90,7 @@ hr {
 }
 
 .resume-button {
-  background-color: #606C5D;
+  background-color: @color;
   border-radius: 25px;
   color: #FFF4F4;
   padding: 0.8rem 1rem;
@@ -139,7 +140,7 @@ svg {
 .second-box {
   width: 100%;
   height: auto;
-  background-color: #F1C376;
+  background-color: @color4;
   padding: 12rem 10% 3rem 10%;
   z-index: 9;
 }
@@ -171,7 +172,7 @@ p {
   }
 
   .first-box {
-    background-color: #F1C376;
+    background-color: @color4;
     height: 77vh;
     width: 40%;
     padding-top: 9rem;
@@ -220,7 +221,7 @@ p {
   }
 
   .second-box {
-    background-color: #FFF4F4;
+    background-color: @color3;
     width: 60%;
     padding: 10% 10% 3rem 10%;
   }
